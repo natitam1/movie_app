@@ -13,7 +13,10 @@ const _layout = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <>
-              <ImageBackground source={images.highlight} />
+              <ImageBackground
+                source={images.highlight}
+                className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+              />
             </>
           ),
         }}
