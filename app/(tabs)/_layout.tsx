@@ -1,12 +1,22 @@
+import { images } from "@/constants/images";
 import { Tabs } from "expo-router";
 import React from "react";
+import { ImageBackground } from "react-native";
 
 const _layout = () => {
   return (
     <Tabs>
       <Tabs.Screen
         name="index"
-        options={{ title: "Home", headerShown: false }}
+        options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <>
+              <ImageBackground source={images.highlight} />
+            </>
+          ),
+        }}
       />
       <Tabs.Screen
         name="search"
